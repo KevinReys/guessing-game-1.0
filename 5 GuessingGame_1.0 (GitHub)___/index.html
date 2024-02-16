@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<title>GUESSING GAME</title>
+</head>
+<body>
+
+<div class="boxset">
+    <h1>GUESSING GAME</h1>
+    <h3>(Jogo da advinhação 1.0)</h3>
+    <hr>
+    <h3>Think of a number between 1 and 10.</h3>
+    <button id="guessBtn">Guess</button>
+    <input type="number" id="result">
+    <h4>Developed by Kevin Reys</h4>
+</div>
+
+<script>
+const guessBtn = document.getElementById('guessBtn');
+const result = document.getElementById('result');
+
+guessBtn.addEventListener('click', () => {
+    const guess = Math.floor(Math.random() * 10) + 1;
+    result.value = guess;
+});
+</script>
+ 
+</body>
+</html>
